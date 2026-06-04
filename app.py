@@ -1,7 +1,24 @@
 from flask import Flask, render_template, request, redirect, session, url_for
 from authlib.integrations.flask_client import OAuth
 import boto3
-from config import *
+import os
+import os
+
+AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
+AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
+
+BUCKET_NAME = os.getenv("BUCKET_NAME")
+REGION = os.getenv("REGION")
+
+GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
+GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
+
+s3 = boto3.client(
+    "s3",
+    aws_access_key_id=AWS_ACCESS_KEY,
+    aws_secret_access_key=AWS_SECRET_KEY,
+    region_name=REGION
+)
 
 app = Flask(__name__)
 
