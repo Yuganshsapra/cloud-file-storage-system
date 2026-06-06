@@ -2,28 +2,27 @@
 
 ## Live Demo
 
-**Deployed Application:**
+**Deployed Application**
+
 https://cloud-file-storage-system-secw.onrender.com
 
 ---
 
-## Project Overview
+# Project Overview
 
-Cloud File Storage System is a cloud-based web application that allows users to securely upload, store, manage, and share files using Amazon S3. The application uses Google OAuth 2.0 for user authentication and is deployed on Render for public access.
+Cloud File Storage System is a cloud-based web application that enables users to securely upload, manage, and share files using Amazon S3. The application uses Google OAuth 2.0 for authentication and is deployed on Render for public access.
 
-The project demonstrates the integration of cloud storage services, authentication mechanisms, and web application deployment in a real-world environment.
-
----
-
-## Problem Statement
-
-Managing files securely and accessing them from anywhere is a common requirement for individuals and organizations. Traditional local storage systems limit accessibility and sharing capabilities.
-
-This project provides a simple cloud-based solution where authenticated users can upload files to cloud storage, access them online, share them through secure links, and manage them efficiently.
+The project demonstrates cloud storage integration, secure authentication, and cloud deployment in a practical environment.
 
 ---
 
-## Objectives
+# Problem Statement
+
+Traditional local storage systems limit accessibility and file sharing capabilities. This project provides a cloud-based solution that allows authenticated users to upload, download, share, and manage files securely from anywhere.
+
+---
+
+# Objectives
 
 * Build a cloud-based file storage application.
 * Implement secure user authentication.
@@ -33,55 +32,55 @@ This project provides a simple cloud-based solution where authenticated users ca
 
 ---
 
-## Features
+# Features
 
-### Authentication
+## Authentication
 
 * Google OAuth 2.0 Login
-* Secure user authentication
-* User session management
-* Logout functionality
+* Secure User Authentication
+* Session Management
+* Logout Functionality
 
-### File Management
+## File Management
 
-* Upload files to AWS S3
-* View uploaded files
-* Download files
-* Delete files
-* Generate secure shareable links
+* Upload Files
+* View Uploaded Files
+* Download Files
+* Delete Files
+* Generate Shareable Links
 
-### Cloud Features
+## Cloud Features
 
-* AWS S3 cloud storage integration
-* S3 bucket versioning enabled
-* Secure access using IAM credentials
+* AWS S3 Integration
+* Bucket Versioning Enabled
+* Secure IAM Access
 
-### Deployment
+## Deployment
 
 * Hosted on Render
-* Accessible through a public URL
+* Publicly Accessible
 
 ---
 
-## Technology Stack
+# Technology Stack
 
-### Frontend
+## Frontend
 
 * HTML5
 * CSS3
 
-### Backend
+## Backend
 
 * Python
 * Flask
 
-### Cloud Services
+## Cloud Services
 
 * Amazon S3
 * Google OAuth 2.0
 * Render
 
-### Libraries Used
+## Libraries Used
 
 * Flask
 * Boto3
@@ -90,129 +89,133 @@ This project provides a simple cloud-based solution where authenticated users ca
 
 ---
 
-## System Architecture
+# System Architecture
 
 User
+
 ↓
+
 Google OAuth Authentication
+
 ↓
+
 Flask Application
+
 ↓
+
 AWS S3 Storage
+
 ↓
+
 File Management Operations
 
 ---
 
-## Project Workflow
+# Project Workflow
 
-### User Authentication
+## User Authentication
 
 1. User opens the application.
-2. User clicks "Login with Google".
-3. Google verifies the user's identity.
+2. User clicks Login with Google.
+3. Google verifies the user.
 4. User is redirected to the dashboard.
 
-### File Upload
+## File Upload
 
 1. User selects a file.
 2. Flask receives the file.
 3. File is uploaded to AWS S3.
-4. File appears in the dashboard.
+4. Dashboard is updated.
 
-### File Download
+## File Download
 
 1. User clicks Download.
-2. Flask generates a temporary S3 download URL.
+2. Flask generates a pre-signed URL.
 3. File is downloaded securely.
 
-### File Sharing
+## File Sharing
 
 1. User clicks Share.
-2. Flask creates a pre-signed URL.
-3. User can share the generated link.
+2. A temporary shareable link is generated.
+3. User can share the file.
 
-### File Deletion
+## File Deletion
 
 1. User clicks Delete.
-2. File is removed from the S3 bucket.
-3. Dashboard updates automatically.
+2. File is removed from AWS S3.
+3. Dashboard refreshes automatically.
 
 ---
 
-## Project Structure
+# Project Structure
 
+```text
 CloudFileStorage
-
+│
 ├── app.py
-
 ├── requirements.txt
-
 ├── Procfile
-
 ├── .gitignore
-
-├── templates
-
-│   ├── login.html
-
-│   └── index.html
-
-└── README.md
+├── README.md
+│
+└── templates
+    ├── login.html
+    └── index.html
+```
 
 ---
 
-## AWS Services Used
+# AWS Services Used
 
-### Amazon S3
-
-Purpose:
-
-* Cloud file storage
-* File retrieval
-* File sharing
-* File versioning
-
-### IAM
+## Amazon S3
 
 Purpose:
 
-* Secure access control
-* Programmatic access through Access Keys
+* File Storage
+* File Retrieval
+* File Sharing
+* Versioning
+
+## IAM
+
+Purpose:
+
+* Secure Access Control
+* Programmatic Access
 
 ---
 
-## Google OAuth 2.0
+# Google OAuth 2.0
 
-Used for:
+Used For:
 
-* User authentication
-* Secure login
-* User identity verification
+* User Authentication
+* Secure Login
+* Identity Verification
 
 Benefits:
 
-* No password storage required
-* Secure and reliable authentication
-* Industry-standard login mechanism
+* No Password Storage
+* Reliable Authentication
+* Industry Standard Security
 
 ---
 
-## Deployment
+# Deployment
 
 The application is deployed using Render.
 
-### Deployment Steps
+## Deployment Steps
 
 1. Push source code to GitHub.
-2. Connect GitHub repository to Render.
+2. Connect repository to Render.
 3. Configure environment variables.
-4. Deploy Flask application using Gunicorn.
+4. Deploy using Gunicorn.
 5. Configure Google OAuth redirect URLs.
 
 ---
 
-## Environment Variables
+# Environment Variables
 
 ```env
 AWS_ACCESS_KEY=YOUR_AWS_ACCESS_KEY
@@ -229,28 +232,28 @@ SECRET_KEY=YOUR_SECRET_KEY
 
 ---
 
-## Installation and Setup
+# Installation and Setup
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone <repository-url>
 cd CloudFileStorage
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run Application
+## Run Application
 
 ```bash
 python app.py
 ```
 
-### Open Browser
+## Open Browser
 
 ```text
 http://127.0.0.1:5000
@@ -258,9 +261,39 @@ http://127.0.0.1:5000
 
 ---
 
-## Learning Outcomes
+# Application Screenshots
 
-Through this project, the following concepts were learned:
+## Login Page
+
+<img width="1337" height="767" alt="image" src="https://github.com/user-attachments/assets/35a15423-ae57-4b39-8fea-a5a405b834db" />
+
+
+---
+
+## Dashboard
+
+<img width="1091" height="827" alt="image" src="https://github.com/user-attachments/assets/d74c6f74-d696-45bf-9025-7aa88de5dad9" />
+
+
+---
+
+## Upload File
+
+<img width="975" height="810" alt="image" src="https://github.com/user-attachments/assets/f21cbf4c-c1dc-4ea6-a78d-05191a512453" />
+
+
+
+
+---
+
+# Link Generated
+
+<img width="717" height="205" alt="image" src="https://github.com/user-attachments/assets/7aa8a4de-facc-47f7-80c5-8b1965802035" />
+
+
+# Learning Outcomes
+
+Through this project, the following concepts were explored:
 
 * Cloud Computing Fundamentals
 * AWS S3 Integration
@@ -273,21 +306,21 @@ Through this project, the following concepts were learned:
 
 ---
 
-## Future Enhancements
+# Future Enhancements
 
-* User-specific file folders
-* File search functionality
-* File preview support
-* Storage usage analytics
-* Multi-file upload
-* Database integration
-* Role-based access control
-* Email notifications
+* User-specific folders
+* File Search Functionality
+* File Preview Support
+* Storage Usage Analytics
+* Multi-file Upload
+* Database Integration
+* Role-Based Access Control
+* Email Notifications
 
 ---
 
-## Conclusion
+# Conclusion
 
-The Cloud File Storage System successfully demonstrates the integration of modern cloud technologies with web application development. The project provides secure authentication, cloud-based file management, and public deployment while maintaining simplicity and scalability.
+The Cloud File Storage System demonstrates the integration of cloud technologies with web application development. The project provides secure authentication, cloud-based file management, and public deployment while maintaining simplicity and scalability.
 
-This project serves as a practical implementation of cloud computing concepts and real-world application deployment.
+It serves as a practical implementation of cloud computing concepts and modern application deployment.
