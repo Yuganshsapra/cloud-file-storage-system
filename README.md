@@ -265,21 +265,24 @@ http://127.0.0.1:5000
 
 ## Login Page
 
-<img width="1337" height="767" alt="image" src="https://github.com/user-attachments/assets/35a15423-ae57-4b39-8fea-a5a405b834db" />
+<img width="1067" height="777" alt="image" src="https://github.com/user-attachments/assets/7fdc17ef-7481-4596-a575-9b8842e5d325" />
+
 
 
 ---
 
 ## Dashboard
 
-<img width="1091" height="827" alt="image" src="https://github.com/user-attachments/assets/d74c6f74-d696-45bf-9025-7aa88de5dad9" />
+<img width="797" height="852" alt="image" src="https://github.com/user-attachments/assets/0f9f56cc-5787-48ac-8cd8-cc9da83f423b" />
+
 
 
 ---
 
 ## Upload File
 
-<img width="975" height="810" alt="image" src="https://github.com/user-attachments/assets/f21cbf4c-c1dc-4ea6-a78d-05191a512453" />
+<img width="842" height="857" alt="image" src="https://github.com/user-attachments/assets/cc730c67-d053-4c7b-b427-cdc0df006833" />
+
 
 
 
